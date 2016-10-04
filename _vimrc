@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" ------------------------------------------------------------------
+" Plugins
+" ------------------------------------------------------------------
+
 " Add plugins
 call plug#begin('~/.vim/plugged')  
 
@@ -21,6 +25,10 @@ Plug 'tpope/vim-obsession'
 " Add plugins to &runtimepath 
 call plug#end()
 
+
+" ------------------------------------------------------------------
+" Misc settings
+" ------------------------------------------------------------------
 
 " Default system clipboard
 set clipboard=unnamed
