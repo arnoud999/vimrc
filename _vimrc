@@ -64,6 +64,11 @@ let g:ycm_autoclose_preview_window_after_completion=1
 
 " Set path for R
 " let R_path = "C:\\R\\R-3.3.1\\bin\\x64"
+let R_vsplit = 1
+let R_assign_map = "<M-->"
+let R_show_args = 1
+let R_args_in_stline = 1
+
 
 " Keyboard shortcuts
 " Easier shortcuts to navigate splits
