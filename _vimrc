@@ -22,6 +22,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Remember session
 Plug 'tpope/vim-obsession'
 
+" Fuzzy find
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Add plugins to &runtimepath 
 call plug#end()
 
@@ -30,6 +33,9 @@ call plug#end()
 " Misc settings
 " ------------------------------------------------------------------
 
+" Allow mouse input
+set mouse=a
+"
 " Default system clipboard
 set clipboard=unnamed
 
