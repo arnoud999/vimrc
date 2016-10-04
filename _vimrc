@@ -28,6 +28,17 @@ call plug#begin('~/.vim/plugged')
 	" File tree
 	Plug 'scrooloose/nerdtree'
 
+	" Markdown preview
+	Plug 'shime/vim-livedown'
+
+	" Python syntax linter
+	Plug 'nvie/vim-flake8'
+	Plug 'klen/python-mode'
+	Plug 'Valloric/YouCompleteMe'
+	Plug 'scrooloose/syntastic'
+	Plug 'ervandew/supertab'
+	Plug 'tmhedberg/SimpylFold'
+
 " Add plugins to &runtimepath 
 call plug#end()
 
@@ -45,8 +56,14 @@ set clipboard=unnamed
 " Show line numbers
 set number
 
+" Show docstring when folded
+let g:SimpylFold_docstring_preview = 1
+
+"autocomplete
+let g:ycm_autoclose_preview_window_after_completion=1
+
 " Set path for R
-let R_path = "C:\\R\\R-3.3.1\\bin\\x64"
+" let R_path = "C:\\R\\R-3.3.1\\bin\\x64"
 
 " Keyboard shortcuts
 " Easier shortcuts to navigate splits
