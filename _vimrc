@@ -34,7 +34,7 @@ call plug#begin('~/.vim/plugged')
 	" Python syntax linter
 	Plug 'nvie/vim-flake8'
 	Plug 'klen/python-mode'
-	Plug 'Valloric/YouCompleteMe'
+	" Plug 'Valloric/YouCompleteMe'
 	Plug 'scrooloose/syntastic'
 	Plug 'ervandew/supertab'
 	Plug 'tmhedberg/SimpylFold'
@@ -42,10 +42,62 @@ call plug#begin('~/.vim/plugged')
 " Add plugins to &runtimepath 
 call plug#end()
 
-
 " ------------------------------------------------------------------
 " Misc settings
 " ------------------------------------------------------------------
+
+" tab settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Misc options
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+
+" New leader key
+let mapleader = ","
+
+" better searching/moving
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase " Ignore case except when uppercase
+set gdefault " No need for g at the end of a search
+set incsearch " Highlight searches as you type
+set showmatch
+set hlsearch
+" Delete highlight
+nnoremap <leader><space> :noh<cr> 
+" Use tab to move around bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Handle long lines correctly
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+"Allow ; instead of :
+nnoremap ; :
+
+" Autosave on loss of focus 
+au FocusLost * :wa
 
 " Allow mouse input
 set mouse=a
