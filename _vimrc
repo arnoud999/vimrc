@@ -25,6 +25,10 @@ call plug#begin('~/.vim/plugged')
 	" Fuzzy find
 	Plug 'ctrlpvim/ctrlp.vim'
 
+    " Surround
+    Plug 'tpope/vim-surround'
+    xmap s <Plug>VSurround
+
 	" File tree
 	Plug 'scrooloose/nerdtree'
 
@@ -91,7 +95,7 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+" set colorcolumn=85
 
 "Allow ; instead of :
 nnoremap ; :
