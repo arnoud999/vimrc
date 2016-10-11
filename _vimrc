@@ -22,7 +22,7 @@ call plug#begin('~/.vim/plugged')
 	" Remember session
 	Plug 'tpope/vim-obsession'
 
-	" Fuzzy find
+	" Fuzzy find (Press C-p)
 	Plug 'ctrlpvim/ctrlp.vim'
 
     " Surround
@@ -31,16 +31,25 @@ call plug#begin('~/.vim/plugged')
 
 	" File tree
 	Plug 'scrooloose/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin' " Git flags
+    map <C-k><C-b> :NERDTreeToggle<CR>
 
 	" Markdown preview
 	Plug 'shime/vim-livedown'
+    map <C-S-m> :LivedownPreview<CR>
 
+    "Markdown support
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+    set conceallevel=2 " Conceal links
+    let g:vim_markdown_folding_disabled = 1 " Disable folding
+    
 	" Python syntax linter
 	Plug 'nvie/vim-flake8'
 	Plug 'klen/python-mode'
-	" Plug 'Valloric/YouCompleteMe'
-	Plug 'scrooloose/syntastic'
-	Plug 'ervandew/supertab'
+	Plug 'Valloric/YouCompleteMe'
+	Plug 'scrooloose/syntastic' " Show syntax errors
+    Plug 'ervandew/supertab' " Use tab to complete
 	Plug 'tmhedberg/SimpylFold'
 
 " Add plugins to &runtimepath 
@@ -72,9 +81,15 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
+set foldmethod=indent
+set foldignore=
 
 " New leader key
 let mapleader = ","
+
+" Exit insert mode with jj
+inoremap jj <ESC>
+ 
 
 " better searching/moving
 nnoremap / /\v
