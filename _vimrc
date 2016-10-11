@@ -1,6 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" New leader key
+let mapleader = ","
+
 " ------------------------------------------------------------------
 " Plugins
 " ------------------------------------------------------------------
@@ -27,12 +30,21 @@ call plug#begin('~/.vim/plugged')
 
     " Surround
     Plug 'tpope/vim-surround'
-    xmap s <Plug>VSurround
+    " xmap s <Plug>VSurround
+    " nmap s <Plug>VSurround
 
 	" File tree
 	Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin' " Git flags
     map <C-k><C-b> :NERDTreeToggle<CR>
+    
+    " Add commenting with <C-/>
+    Plug 'scrooloose/nerdcommenter'
+    " Add spaces after comment delimiters by default
+    let g:NERDSpaceDelims = 1
+    nmap <C-_> <leader>c<Space>
+    vmap <C-_> <leader>c<Space>
+    
 
 	" Markdown preview
 	Plug 'shime/vim-livedown'
@@ -83,9 +95,6 @@ set laststatus=2
 set relativenumber
 set foldmethod=indent
 set foldignore=
-
-" New leader key
-let mapleader = ","
 
 " Exit insert mode with jj
 inoremap jj <ESC>
