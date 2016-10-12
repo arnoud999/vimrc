@@ -42,8 +42,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdcommenter'
     " Add spaces after comment delimiters by default
     let g:NERDSpaceDelims = 1
-    nmap <C-_> <leader>c<Space>
-    vmap <C-_> <leader>c<Space>
+    nmap <C-_> <leader>c<Space> " Unix
+    vmap <C-_> <leader>c<Space> " Unix
+    nmap <C-/> <leader>c<Space> " Windows
+    vmap <C-/> <leader>c<Space> " Windows
     
 
 	" Markdown preview
@@ -122,7 +124,7 @@ set formatoptions=qrn1
 " set colorcolumn=85
 
 "Allow ; instead of :
-nnoremap ; :
+" nnoremap ; :
 
 " Autosave on loss of focus 
 au FocusLost * :wa
